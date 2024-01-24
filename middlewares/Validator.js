@@ -20,8 +20,6 @@ module.exports.validate = (schema) => (req, res, next) => {
   }
 
   if (schema.params) {
-    console.log(req.query)
-
     for(let key of Object.keys(schema.params)) {
       const {type, required} = schema.params[key];
       if (required && !req.params[key]) {
