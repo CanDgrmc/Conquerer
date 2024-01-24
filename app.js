@@ -24,7 +24,7 @@ const run = async () => {
 const isDebugModeOn = () => process.env.DEBUG && ['1', 'true', 'True'].includes(process.env.DEBUG)
 
 run().then(() => logger.info('Application is built')).catch((err) => {
-  if (isDebugModeOn()) { process
+  if (isDebugModeOn()) {
     logger.error(err.message);
   }
   
